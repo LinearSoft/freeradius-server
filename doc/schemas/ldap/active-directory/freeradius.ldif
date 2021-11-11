@@ -1,0 +1,969 @@
+#
+# Active Directory Schema for FreeRadius configuration
+#
+# To extend your Active Directory schema, run one of the following command
+# on your Windows DC (default port - Active Directory):
+#
+#  ldifde -i -f schema.ActiveDirectory -c "CN=Schema,CN=Configuration,DC=X" #schemaNamingContext
+#
+# or on your Windows DC if using another port (with Active Directory LightWeight Directory Services / ADAM-Active Directory Application Mode)
+# Port 50000 by example (or any other port specified when defining the ADLDS/ADAM instance
+#
+#  ldifde -i -f schema.ActiveDirectory -t 50000 -c "CN=Schema,CN=Configuration,DC=X" #schemaNamingContext
+#
+# or
+#
+#  ldifde -i -f schema.ActiveDirectory -s server:port -c "CN=Schema,CN=Configuration,DC=X" #schemaNamingContext
+#
+# Can add username domain and password
+#
+# -b username domain password
+#
+# Can create Log file in current or any directory
+#
+# -j .
+#
+
+dn: CN=radiusArapFeatures,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusArapFeatures
+attributeID: 1.3.6.1.4.1.11344.4.3.1.1
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusArapFeatures
+name: Radius-Arap-Features
+isSingleValued: TRUE
+
+dn: CN=radiusArapSecurity,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusArapSecurity
+attributeID: 1.3.6.1.4.1.11344.4.3.1.2
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusArapSecurity
+name: Radius-Arap-Security
+isSingleValued: TRUE
+
+dn: CN=radiusArapZoneAccess,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusArapZoneAccess
+attributeID: 1.3.6.1.4.1.11344.4.3.1.3
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusArapZoneAccess
+name: Radius-Arap-Zone-Access
+isSingleValued: TRUE
+
+dn: CN=radiusAuthType,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusAuthType
+attributeID: 1.3.6.1.4.1.11344.4.3.1.44
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusAuthType
+name: Radius-Auth-Type
+isSingleValued: TRUE
+
+dn: CN=radiusCallbackId,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusCallbackId
+attributeID: 1.3.6.1.4.1.11344.4.3.1.4
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusCallbackId
+name: Radius-Callback-Id
+isSingleValued: TRUE
+
+dn: CN=radiusCallbackNumber,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusCallbackNumber
+attributeID: 1.3.6.1.4.1.11344.4.3.1.5
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusCallbackNumber
+name: Radius-Callback-Number
+isSingleValued: TRUE
+
+dn: CN=radiusCalledStationId,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusCalledStationId
+attributeID: 1.3.6.1.4.1.11344.4.3.1.6
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusCalledStationId
+name: Radius-Called-Station-Id
+isSingleValued: TRUE
+
+dn: CN=radiusCallingStationId,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusCallingStationId
+attributeID: 1.3.6.1.4.1.11344.4.3.1.7
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusCallingStationId
+name: Radius-Calling-Station-Id
+isSingleValued: TRUE
+
+dn: CN=radiusClass,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusClass
+attributeID: 1.3.6.1.4.1.11344.4.3.1.8
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusClass
+name: Radius-Class
+isSingleValued: FALSE
+
+dn: CN=radiusClientIPAddress,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusClientIPAddress
+attributeID: 1.3.6.1.4.1.11344.4.3.1.45
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusClientIPAddress
+name: Radius-Client-IP-Address
+isSingleValued: TRUE
+
+dn: CN=radiusFilterId,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusFilterId
+attributeID: 1.3.6.1.4.1.11344.4.3.1.9
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusFilterId
+name: Radius-Filter-Id
+isSingleValued: FALSE
+
+dn: CN=radiusFramedAppleTalkLink,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusFramedAppleTalkLink
+attributeID: 1.3.6.1.4.1.11344.4.3.1.10
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusFramedAppleTalkLink
+name: Radius-Framed-AppleTalk-Link
+isSingleValued: TRUE
+
+dn: CN=radiusFramedAppleTalkNetwork,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusFramedAppleTalkNetwork
+attributeID: 1.3.6.1.4.1.11344.4.3.1.11
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusFramedAppleTalkNetwork
+name: Radius-Framed-AppleTalk-Network
+isSingleValued: FALSE
+
+dn: CN=radiusFramedAppleTalkZone,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusFramedAppleTalkZone
+attributeID: 1.3.6.1.4.1.11344.4.3.1.12
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusFramedAppleTalkZone
+name: Radius-Framed-AppleTalk-Zone
+isSingleValued: TRUE
+
+dn: CN=radiusFramedCompression,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusFramedCompression
+attributeID: 1.3.6.1.4.1.11344.4.3.1.13
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusFramedCompression
+name: Radius-Framed-Compression
+isSingleValued: FALSE
+
+dn: CN=radiusFramedIPAddress,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusFramedIPAddress
+attributeID: 1.3.6.1.4.1.11344.4.3.1.14
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusFramedIPAddress
+name: Radius-Framed-IP-Address
+isSingleValued: TRUE
+
+dn: CN=radiusFramedIPNetmask,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusFramedIPNetmask
+attributeID: 1.3.6.1.4.1.11344.4.3.1.15
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusFramedIPNetmask
+name: Radius-Framed-IP-Netmask
+isSingleValued: TRUE
+
+dn: CN=radiusFramedIPXNetwork,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusFramedIPXNetwork
+attributeID: 1.3.6.1.4.1.11344.4.3.1.16
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusFramedIPXNetwork
+name: Radius-Framed-IPX-Network
+isSingleValued: TRUE
+
+dn: CN=radiusFramedMTU,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusFramedMTU
+attributeID: 1.3.6.1.4.1.11344.4.3.1.17
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusFramedMTU
+name: Radius-Framed-MTU
+isSingleValued: TRUE
+
+dn: CN=radiusFramedProtocol,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusFramedProtocol
+attributeID: 1.3.6.1.4.1.11344.4.3.1.18
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusFramedProtocol
+name: Radius-Framed-Protocol
+isSingleValued: TRUE
+
+dn: CN=radiusFramedRoute,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusFramedRoute
+attributeID: 1.3.6.1.4.1.11344.4.3.1.19
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusFramedRoute
+name: Radius-Framed-Route
+isSingleValued: FALSE
+
+dn: CN=radiusFramedRouting,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusFramedRouting
+attributeID: 1.3.6.1.4.1.11344.4.3.1.20
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusFramedRouting
+name: Radius-Framed-Routing
+isSingleValued: TRUE
+
+dn: CN=radiusGroupName,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusGroupName
+attributeID: 1.3.6.1.4.1.11344.4.3.1.46
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusGroupName
+name: Radius-Group-Name
+isSingleValued: FALSE
+
+dn: CN=radiusHint,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusHint
+attributeID: 1.3.6.1.4.1.11344.4.3.1.47
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusHint
+name: Radius-Hint
+isSingleValued: TRUE
+
+dn: CN=radiusHuntgroupName,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusHuntgroupName
+attributeID: 1.3.6.1.4.1.11344.4.3.1.48
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusHuntgroupName
+name: Radius-Huntgroup-Name
+isSingleValued: FALSE
+
+dn: CN=radiusIdleTimeout,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusIdleTimeout
+attributeID: 1.3.6.1.4.1.11344.4.3.1.21
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusIdleTimeout
+name: Radius-Idle-Timeout
+isSingleValued: TRUE
+
+dn: CN=radiusLoginIPHost,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusLoginIPHost
+attributeID: 1.3.6.1.4.1.11344.4.3.1.22
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusLoginIPHost
+name: Radius-Login-IP-Host
+isSingleValued: FALSE
+
+dn: CN=radiusLoginLATGroup,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusLoginLATGroup
+attributeID: 1.3.6.1.4.1.11344.4.3.1.23
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusLoginLATGroup
+name: Radius-Login-LAT-Group
+isSingleValued: TRUE
+
+dn: CN=radiusLoginLATNode,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusLoginLATNode
+attributeID: 1.3.6.1.4.1.11344.4.3.1.24
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusLoginLATNode
+name: Radius-Login-LAT-Node
+isSingleValued: TRUE
+
+dn: CN=radiusLoginLATPort,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusLoginLATPort
+attributeID: 1.3.6.1.4.1.11344.4.3.1.25
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusLoginLATPort
+name: Radius-Login-LAT-Port
+isSingleValued: TRUE
+
+dn: CN=radiusLoginLATService,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusLoginLATService
+attributeID: 1.3.6.1.4.1.11344.4.3.1.26
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusLoginLATService
+name: Radius-Login-LAT-Service
+isSingleValued: TRUE
+
+dn: CN=radiusLoginService,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusLoginService
+attributeID: 1.3.6.1.4.1.11344.4.3.1.27
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusLoginService
+name: Radius-Login-Service
+isSingleValued: TRUE
+
+dn: CN=radiusLoginTCPPort,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusLoginTCPPort
+attributeID: 1.3.6.1.4.1.11344.4.3.1.28
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusLoginTCPPort
+name: Radius-Login-TCP-Port
+isSingleValued: TRUE
+
+dn: CN=radiusPasswordRetry,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusPasswordRetry
+attributeID: 1.3.6.1.4.1.11344.4.3.1.29
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusPasswordRetry
+name: Radius-Password-Retry
+isSingleValued: TRUE
+
+dn: CN=radiusPortLimit,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusPortLimit
+attributeID: 1.3.6.1.4.1.11344.4.3.1.30
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusPortLimit
+name: Radius-Port-Limit
+isSingleValued: TRUE
+
+dn: CN=radiusProfileDN,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusProfileDN
+attributeID: 1.3.6.1.4.1.11344.4.3.1.49
+attributeSyntax: 2.5.5.1
+oMSyntax: 127
+lDAPDisplayName: radiusProfileDN
+name: Radius-ProfileDN
+isSingleValued: FALSE
+
+dn: CN=radiusPrompt,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusPrompt
+attributeID: 1.3.6.1.4.1.11344.4.3.1.31
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusPrompt
+name: Radius-Prompt
+isSingleValued: TRUE
+
+dn: CN=radiusProxyToRealm,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusProxyToRealm
+attributeID: 1.3.6.1.4.1.11344.4.3.1.50
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusProxyToRealm
+name: Radius-Proxy-To-Realm
+isSingleValued: TRUE
+
+dn: CN=radiusReplicateToRealm,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusReplicateToRealm
+attributeID: 1.3.6.1.4.1.11344.4.3.1.51
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusReplicateToRealm
+name: Radius-Replicate-To-Realm
+isSingleValued: TRUE
+
+dn: CN=radiusRealm,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusRealm
+attributeID: 1.3.6.1.4.1.11344.4.3.1.52
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusRealm
+name: Radius-Realm
+isSingleValued: TRUE
+
+dn: CN=radiusServiceType,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusServiceType
+attributeID: 1.3.6.1.4.1.11344.4.3.1.32
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusServiceType
+name: Radius-Service-Type
+isSingleValued: TRUE
+
+dn: CN=radiusSessionTimeout,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusSessionTimeout
+attributeID: 1.3.6.1.4.1.11344.4.3.1.33
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusSessionTimeout
+name: Radius-Session-Timeout
+isSingleValued: TRUE
+
+dn: CN=radiusTerminationAction,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusTerminationAction
+attributeID: 1.3.6.1.4.1.11344.4.3.1.34
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusTerminationAction
+name: Radius-Termination-Action
+isSingleValued: TRUE
+
+dn: CN=radiusTunnelAssignmentId,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusTunnelAssignmentId
+attributeID: 1.3.6.1.4.1.11344.4.3.1.35
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusTunnelAssignmentId
+name: Radius-Tunnel-Assignment-Id
+isSingleValued: FALSE
+
+dn: CN=radiusTunnelMediumType,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusTunnelMediumType
+attributeID: 1.3.6.1.4.1.11344.4.3.1.36
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusTunnelMediumType
+name: Radius-Tunnel-Medium-Type
+isSingleValued: FALSE
+
+dn: CN=radiusTunnelPassword,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusTunnelPassword
+attributeID: 1.3.6.1.4.1.11344.4.3.1.37
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusTunnelPassword
+name: Radius-Tunnel-Password
+isSingleValued: TRUE
+
+dn: CN=radiusTunnelPreference,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusTunnelPreference
+attributeID: 1.3.6.1.4.1.11344.4.3.1.38
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusTunnelPreference
+name: Radius-Tunnel-Preference
+isSingleValued: FALSE
+
+dn: CN=radiusTunnelPrivateGroupId,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusTunnelPrivateGroupId
+attributeID: 1.3.6.1.4.1.11344.4.3.1.39
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusTunnelPrivateGroupId
+name: Radius-Tunnel-Private-GroupId
+isSingleValued: FALSE
+
+dn: CN=radiusTunnelServerEndpoint,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusTunnelServerEndpoint
+attributeID: 1.3.6.1.4.1.11344.4.3.1.40
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusTunnelServerEndpoint
+name: Radius-Tunnel-Server-Endpoint
+isSingleValued: FALSE
+
+dn: CN=radiusTunnelType,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusTunnelType
+attributeID: 1.3.6.1.4.1.11344.4.3.1.41
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusTunnelType
+name: Radius-Tunnel-Type
+isSingleValued: FALSE
+
+dn: CN=radiusVSA,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusVSA
+attributeID: 1.3.6.1.4.1.11344.4.3.1.42
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusVSA
+name: Radius-VSA
+isSingleValued: FALSE
+
+dn: CN=radiusTunnelClientEndpoint,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusTunnelClientEndpoint
+attributeID: 1.3.6.1.4.1.11344.4.3.1.43
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusTunnelClientEndpoint
+name: Radius-Tunnel-Client-Endpoint
+isSingleValued: FALSE
+
+dn: CN=radiusSimultaneousUse,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusSimultaneousUse
+attributeID: 1.3.6.1.4.1.11344.4.3.1.53
+attributeSyntax: 2.5.5.9
+oMSyntax: 2
+lDAPDisplayName: radiusSimultaneousUse
+name: Radius-Simultaneous-Use
+isSingleValued: TRUE
+
+dn: CN=radiusLoginTime,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusLoginTime
+attributeID: 1.3.6.1.4.1.11344.4.3.1.54
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusLoginTime
+name: Radius-Login-Time
+isSingleValued: TRUE
+
+dn: CN=radiusUserCategory,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusUserCategory
+attributeID: 1.3.6.1.4.1.11344.4.3.1.55
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusUserCategory
+name: Radius-User-Category
+isSingleValued: TRUE
+
+dn: CN=radiusStripUserName,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusStripUserName
+attributeID: 1.3.6.1.4.1.11344.4.3.1.56
+attributeSyntax: 2.5.5.8
+oMSyntax: 1
+lDAPDisplayName: radiusStripUserName
+name: Radius-Strip-UserName
+isSingleValued: TRUE
+
+dn: CN=dialupAccess,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: dialupAccess
+attributeID: 1.3.6.1.4.1.11344.4.3.1.57
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: dialupAccess
+name: Radius-Dialup-Access
+isSingleValued: TRUE
+
+dn: CN=radiusExpiration,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusExpiration
+attributeID: 1.3.6.1.4.1.11344.4.3.1.58
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusExpiration
+name: Radius-Expiration
+isSingleValued: TRUE
+
+dn: CN=radiusNASIpAddress,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusNASIpAddress
+attributeID: 1.3.6.1.4.1.11344.4.3.1.61
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusNASIpAddress
+name: Radius-NAS-Ip-Address
+isSingleValued: TRUE
+
+dn: CN=radiusReplyMessage,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusReplyMessage
+attributeID: 1.3.6.1.4.1.11344.4.3.1.62
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusReplyMessage
+name: Radius-Reply-Message
+isSingleValued: FALSE
+
+dn: CN=radiusAttribute,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusAttribute
+attributeID: 1.3.6.1.4.1.11344.4.3.1.59
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusAttribute
+name: Radius-Generic-Attribute
+isSingleValued: FALSE
+
+dn: CN=radiusControlAttribute,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusControlAttribute
+attributeID: 1.3.6.1.4.1.11344.4.3.1.63
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusControlAttribute
+name: Radius-Generic-Control
+isSingleValued: FALSE
+
+dn: CN=radiusReplyAttribute,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusReplyAttribute
+attributeID: 1.3.6.1.4.1.11344.4.3.1.64
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusReplyAttribute
+name: Radius-Generic-Reply
+isSingleValued: FALSE
+
+dn: CN=radiusRequestAttribute,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+showInAdvancedViewOnly: TRUE
+cn: radiusRequestAttribute
+attributeID: 1.3.6.1.4.1.11344.4.3.1.65
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+lDAPDisplayName: radiusRequestAttribute
+name: Radius-Generic-Request
+isSingleValued: FALSE
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=radiusProfile,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: classSchema
+cn: radiusProfile
+subClassOf: top
+objectClassCategory: 3
+governsID: 1.3.6.1.4.1.3317.4.3.2.1
+lDAPDisplayName: radiusProfile
+adminDescription: FreeRadius profile
+name: Radius-Profile
+showInAdvancedViewOnly: FALSE
+mustContain: cn
+mayContain: radiusArapFeatures
+mayContain: radiusArapSecurity
+mayContain: radiusArapZoneAccess
+mayContain: radiusAuthType
+mayContain: radiusCallbackId
+mayContain: radiusCallbackNumber
+mayContain: radiusCalledStationId
+mayContain: radiusCallingStationId
+mayContain: radiusClass
+mayContain: radiusClientIPAddress
+mayContain: radiusFilterId
+mayContain: radiusFramedAppleTalkLink
+mayContain: radiusFramedAppleTalkNetwork
+mayContain: radiusFramedAppleTalkZone
+mayContain: radiusFramedCompression
+mayContain: radiusFramedIPAddress
+mayContain: radiusFramedIPNetmask
+mayContain: radiusFramedIPXNetwork
+mayContain: radiusFramedMTU
+mayContain: radiusFramedProtocol
+mayContain: radiusAttribute
+mayContain: radiusFramedRoute
+mayContain: radiusFramedRouting
+mayContain: radiusIdleTimeout
+mayContain: radiusGroupName
+mayContain: radiusHint
+mayContain: radiusHuntgroupName
+mayContain: radiusLoginIPHost
+mayContain: radiusLoginLATGroup
+mayContain: radiusLoginLATNode
+mayContain: radiusLoginLATPort
+mayContain: radiusLoginLATService
+mayContain: radiusLoginService
+mayContain: radiusLoginTCPPort
+mayContain: radiusLoginTime
+mayContain: radiusPasswordRetry
+mayContain: radiusPortLimit
+mayContain: radiusPrompt
+mayContain: radiusProxyToRealm
+mayContain: radiusRealm
+mayContain: radiusReplicateToRealm
+mayContain: radiusServiceType
+mayContain: radiusSessionTimeout
+mayContain: radiusStripUserName
+mayContain: radiusTerminationAction
+mayContain: radiusTunnelClientEndpoint
+mayContain: radiusProfileDN
+mayContain: radiusSimultaneousUse
+mayContain: radiusTunnelAssignmentId
+mayContain: radiusTunnelMediumType
+mayContain: radiusTunnelPassword
+mayContain: radiusTunnelPreference
+mayContain: radiusTunnelPrivateGroupId
+mayContain: radiusTunnelServerEndpoint
+mayContain: radiusTunnelType
+mayContain: radiusUserCategory
+mayContain: radiusVSA
+mayContain: radiusExpiration
+mayContain: dialupAccess
+mayContain: radiusNASIpAddress
+mayContain: radiusReplyMessage
+mayContain: radiusControlAttribute
+mayContain: radiusReplyAttribute
+mayContain: radiusRequestAttribute
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=radiusObjectProfile,CN=Schema,CN=Configuration,DC=X
+changetype: add
+objectClass: top
+objectClass: classSchema
+cn: radiusObjectProfile
+subClassOf: top
+objectClassCategory: 1
+possSuperiors: container
+possSuperiors: organizationalUnit
+possSuperiors: domainDNS
+possSuperiors: top
+auxiliaryClass: radiusProfile
+governsID: 1.3.6.1.4.1.3317.4.3.2.2
+lDAPDisplayName: radiusObjectProfile
+adminDescription: A container to be used for creating radius profile objects
+name: Radius-Profile
+showInAdvancedViewOnly: FALSE
+mustContain: cn
+mayContain: uid
+mayContain: userPassword
+mayContain: description
